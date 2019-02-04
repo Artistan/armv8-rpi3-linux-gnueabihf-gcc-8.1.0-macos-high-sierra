@@ -1,2 +1,7 @@
 .vscode
 .DS_Store
+.idea
+git-crosstool-ng
+CMakeRPiExample
+build.log
+armv8-rpi3-linux-gnueabihf
