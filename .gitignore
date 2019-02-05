@@ -5,3 +5,5 @@ git-crosstool-ng
 CMakeRPiExample
 build.log
 armv8-rpi3-linux-gnueabihf
+.build
+x-tools

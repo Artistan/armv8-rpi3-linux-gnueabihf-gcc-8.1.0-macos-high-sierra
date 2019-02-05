@@ -8,5 +8,7 @@ last build ...
   -  `./case-sensitive-volume.sh`
 - setup the crosstool-ng build environment for raspberry pi.
   -  `./crosstool-ng-setup.sh`
-- ct-ng build example
+- ct-ng build
   -  `./ct-ng-build.sh`
+- test compile example
+  -  `./test-rpi-build.sh`
