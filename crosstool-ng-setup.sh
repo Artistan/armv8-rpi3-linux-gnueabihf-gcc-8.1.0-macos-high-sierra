@@ -4,7 +4,7 @@
 #cd mac-os-cross-compile-arm-rpi-linux-gnueabihf
 #echo "run ./build.sh to setup compiler";
 
-if [ ! -f "./.config" ]; then
+if [[ ! -f "./.config" ]]; then
 	echo "fetching .config from github"
 	wget "https://raw.githubusercontent.com/Artistan/mac-os-cross-compile-arm-rpi-linux-gnueabihf/master/.config"
 else
@@ -34,7 +34,7 @@ for pkg in crosstool-ng help2man bison cmake automake; do
 	fi
 done
 
-if [ -f "~/.zshrc" ]; then
+if [[ -f "~/.zshrc" ]]; then
 	if grep -Fxq "/usr/local/opt/bison/bin" ~/.zshrc
 	then
 		echo 'bison path already in to .zshrc'
@@ -45,7 +45,7 @@ if [ -f "~/.zshrc" ]; then
 	fi
 fi
 
-if [ -f "~/.bashrc" ]; then
+if [[ -f "~/.bashrc" ]]; then
 	if grep -Fxq "/usr/local/opt/bison/bin" ~/.bashrc
 	then
 		echo 'bison path already in to .bashrc'
@@ -59,7 +59,7 @@ fi
 brew unlink bison >/dev/null 2>&1
 brew link --force bison >/dev/null 2>&1
 
-if [ `which bison` == "/usr/bin/bison" ]; then
+if [[ `which bison` == "/usr/bin/bison" ]]; then
 	echo "which bison should not be /usr/bin/bison"
 	exit 1
 fi
@@ -73,7 +73,7 @@ fi
 #    cd ..
 #fi
 
-if [ `ulimit -n` -lt 256 ]; then
+if [[ `ulimit -n` -lt 256 ]]; then
     echo "upping the ulimit to 1024"
     ulimit -n 1024;
 else
